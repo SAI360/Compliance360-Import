@@ -1,2 +1,0 @@
-dotnet run .\bin\Debug\netcoreapp2.0\Compliance360.Import.dll --baseuri https://secure.compliance360.com --organization [supply organization here] --integrationkey [supply integrationkey here] --module Incidents --component Incident --filepath Incidents-Incident-data.csv
-pause
