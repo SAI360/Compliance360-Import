@@ -43,15 +43,17 @@ The application is written in C# and is a .NET Core 2.0 based application. To bu
 1. Ensure that you have the .Net Core Command-Line interface (CLI) tools installed.
 2. Clone the repository.
 3. From the command line run the following:
-```
--- from the Compliance360.Import directory.
-dotnet restore
-dotnet build
-```
+   ```bash
+   # Run from the Compliance360.Import directory:
+   dotnet restore
+   dotnet build
+   ```
+
 ## Running the Application
 
 To run the app from the command lime:
-```
+
+```bash
 dotnet run ./bin/Debug/netcoreapp2.0/Compliance360.Import.dll [options]
 ```
 
@@ -75,7 +77,8 @@ Example:
 ## Processing Overview
 
 In general, this application posts all data to C360 in a single http request. The data to input is provided in the body of the authentication request in a simple json structure.
-```
+
+```json
 Example:
 {
 	"Incidents":
