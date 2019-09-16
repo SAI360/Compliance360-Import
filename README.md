@@ -11,18 +11,18 @@ NOTE: This application is intended as a sample only.
 The C360 client organization must first do the following:
 1. Create an Integration definition within the C360 website
 2. This Integration will need configurations defined for it. Typically:
- a. Unique identifier field (e.g. Import Id). This field can be used to supply a unique value to prevent duplicates.
- b. Default Module Type (if other than 'Default')
- c. Default Workflow Template
- d. Default Division/Folder
- e. Field Mappings (as needed)
+   - Unique identifier field (e.g. Import Id). This field can be used to supply a unique value to prevent duplicates.
+   - Default Module Type (if other than 'Default')
+   - Default Workflow Template
+   - Default Division/Folder
+   - Field Mappings (as needed)
 3. Relay the following values for use in this application:
- a. Organization
- b. ApplicationKey
+   - Organization
+   - ApplicationKey
 4. Relay the following target field information for use in this application:
- a. Target C360 module name (e.g. Incidents)
- b. Target C360 component name (e.g. Incident)
- c. Target field names (e.g. Name, Description, etc.)
+   - Target C360 module name (e.g. Incidents)
+   - Target C360 component name (e.g. Incident)
+   - Target field names (e.g. Name, Description, etc.)
 
 ## Field Mappings
 C360 module components 'generally' have consistent fields and names from C360 client organization to
