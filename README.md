@@ -50,6 +50,7 @@ dotnet run ./bin/Debug/netcoreapp2.0/Compliance360.Import.dll [options]
 ```
 
 The following lists the required command line options:
+
 | Option | Description |
 | ------ | ----------- |
 | --filepath | The path to the *.CSV file to import |
