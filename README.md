@@ -62,7 +62,7 @@ The following lists the required command line options:
 The command line options are in specified in the format: {option}[space]{value}. 
 ```
 Example: 
---baseuri https://secure.compliance360.com --organization testorg --integrationkey DDIICZ1UORHTFNO5E8JTAVTEBWYH3ZGU9Y0JUPLKQHT --module inicidents --component incident --filepath Incidents-Incident-data.csv 
+--baseuri https://secure.compliance360.com --organization testorg --integrationkey DDIICZ1UORHTFNO5E8JTAVTEBWYH3ZGU9Y0JUPLKQHT --module incidents --component incident --filepath Incidents-Incident-data.csv 
 ```
 
 # Processing Overview
