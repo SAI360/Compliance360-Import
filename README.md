@@ -68,7 +68,7 @@ Example:
 # Processing Overview
 In general, this application posts all data to C360 in a single http request. The data to input is provided in the body of the authentication request in a simple json structure.
 ```
-Example: 
+
 {
 	"Incidents":
 	{
