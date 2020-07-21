@@ -1,4 +1,4 @@
-# Compliance 360 Import (Simple batch import)
+# Compliance 360 Import (Efficient batch import)
 ## Introduction
 The Compliance 360 Import application is a sample application that demonstrates posting data to the Compliance 360 API for importing in the most efficient manner. It's focus is for clients (or third-party partners) who are looking to automate the importing of data into a compliance 360 client organization on a regular basis. It first requires that the given C360 client organization admin perform relevant integration configurations to permit this activity. This produces an Integration Key which is then provideded when calling the C360 API Authenticate method.
 
