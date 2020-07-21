@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace Compliance360.ImportStarter
 {
     /// <summary>
-    /// This is a sample application that will read a set of sample data from a file data
-    ///  and insert it into the designated C360 component
+    /// This is a sample application that will POST a data file to the 
+	/// C360 API for insertion/update to the designated C360 component.
     /// </summary>
     public class Program
     {
-        /// <summary>
+        /// <summary>y
         /// Main entry point for the application.
         /// </summary>
         /// <param name="args">Command line arguments.</param>

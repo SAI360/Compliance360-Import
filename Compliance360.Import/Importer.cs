@@ -1,28 +1,12 @@
 using System;
-using System.IO;
-using System.Text;
-using System.Net;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.IO;
+using System.Net;
 
 namespace Compliance360.ImportStarter
 {
     //
-    //
-    // Instructions/Requirements:
-    //
-    // 1. Client must create an Integration defintion within the C360 website
-    //
-    // 2. The Integration should have configurations for;
-    //    a. Unique identifier field (e.g. Import Id)
-    //    b. Default Module Type (if other than 'Default')
-    //    c. Default Workflow Template
-    //    d. Default Division/Folder
-    //
-    // 3. Provide the following values for use here;
-    //    a. Organization
-    //    b. ApplicationKey
-    //
+    // Instructions/Requirements: (see README.md)
     //
 
     public class Importer
@@ -68,41 +52,18 @@ namespace Compliance360.ImportStarter
                 throw new ArgumentException("Missing argument [--filepath]");
             }
 
-            var url = Url();
+            var uri = C360_Uri();
 
-            var dataJson = ConvertCsvFileToJsonObject();
+            Console.WriteLine("Uploading {0} to {1} ...", _importArgs[argFilePath], uri);
 
-            var bodyJson = "{\"" + _importArgs[argModule] + "\": {\"" + _importArgs[argComponent] + "\":" + dataJson + "}}";
+            var result = PostData(_importArgs[argFilePath], uri);
 
-            PostData(url, bodyJson);
+            Console.WriteLine("\nResponse Received:\n{0}", result);
         }
 
-        public string ConvertCsvFileToJsonObject()
+        public string PostData(string filepath, string url)
         {
-            var csv = new List<string[]>();
-            var lines = File.ReadAllLines(_importArgs[argFilePath]);
-
-            foreach (string line in lines)
-                csv.Add(line.Split(','));
-
-            var properties = lines[0].Split(',');
-
-            var listObjResult = new List<Dictionary<string, string>>();
-
-            for (int i = 1; i < lines.Length; i++)
-            {
-                var objResult = new Dictionary<string, string>();
-                for (int j = 0; j < properties.Length; j++)
-                    objResult.Add(properties[j], csv[i][j]);
-
-                listObjResult.Add(objResult);
-            }
-
-            return JsonConvert.SerializeObject(listObjResult);
-        }
-
-        public void PostData(string url, string bodyJson)
-        {
+            var result = string.Empty;
             HttpWebRequest request = null;
 
             try
@@ -116,9 +77,9 @@ namespace Compliance360.ImportStarter
             }
 
             request.Method = WebRequestMethods.Http.Post;
-            request.ContentType = "application/json";
+            request.ContentType = "application/x-binary";
 
-            var inputStream = new MemoryStream(Encoding.UTF8.GetBytes(bodyJson));
+            var inputStream = new FileStream(filepath, FileMode.Open, FileAccess.Read);
             var outputStream = request.GetRequestStream();
             inputStream.CopyTo(outputStream);
 
@@ -127,7 +88,7 @@ namespace Compliance360.ImportStarter
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
                     var reader = new StreamReader(response.GetResponseStream());
-                    var result = reader.ReadToEnd();
+                    result = reader.ReadToEnd();
                 }
             }
             catch (WebException webException)
@@ -135,16 +96,16 @@ namespace Compliance360.ImportStarter
                 if (((HttpWebResponse)(webException.Response)).StatusCode == HttpStatusCode.BadRequest)
                 {
                     var exceptionReader = new StreamReader(webException.Response.GetResponseStream());
-                    var exceptionresult = exceptionReader.ReadToEnd();
+                    result = exceptionReader.ReadToEnd();
                 }
-
-                throw;
             }
+
+            return result.Replace("\0", "");
         }
 
-        public string Url()
+        public string C360_Uri()
         {
-            return $@"{_importArgs[argBaseUri]}/API/2.0/Security/Authenticate?organization={_importArgs[argOrganization]}&integrationkey={_importArgs[argIntegrationKey]}";
+           return $@"{_importArgs[argBaseUri]}/API/2.0/Security/Authenticate?organization={_importArgs[argOrganization]}&integrationkey={_importArgs[argIntegrationKey]}&module={_importArgs[argModule]}&component={_importArgs[argComponent]}";
         }
     }
 }

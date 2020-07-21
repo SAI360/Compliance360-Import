@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Compliance360.PPMIncidentsImport": {
-      "commandName": "Project",
-      "commandLineArgs": "--baseuri https://secure.compliance360.com --organization [supply organization here] --integrationkey [supply integrationkey here] --module Incidents --component Incident --filepath \\GitHub\\Compliance360.Import\\Incidents-Incident-data.csv"
-    }
-  }
-}
