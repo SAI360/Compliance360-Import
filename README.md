@@ -117,4 +117,4 @@ Example JSON format:
 ``` 
 
 # API Documentation
-Full API Documentation can be found here [Compliance 360 REST API Documentation](https://secure.compliance360.com/Maintenance/REST/v2/index.html)
+Full API Documentation can be found here [Compliance 360 REST API Documentation](https://github.com/SAIGlobal/Compliance360-API-Documentation)
