@@ -53,7 +53,7 @@ The following lists the required command line options:
 | Option | Description |
 | ------ | ----------- |
 | --filepath | The path to the *.CSV file to import |
-| --baseuri | The base uri to the Compliance 360 application. Most likely this value should be https://secure.compliance360.com |
+| --baseuri | The base uri to the Compliance 360 application. Most likely this value should be https&#58;//secure.compliance360.com |
 | --organization | The organization login name of the C360 client. |
 | --integrationkey | The integration key as supplied by the C360 client. |
 | --module | The module name of the target C360 module (no spaces). |
@@ -65,7 +65,7 @@ Example:
 --baseuri https://secure.compliance360.com --organization testorg --integrationkey DDIICZ1UORHTFNO5E8JTAVTEBWYH3ZGU9Y0JUPLKQHT --module inicidents --component incident --filepath Sample-Incidents-Incident-data.xlsx 
 ```
 
-# Processing Overview
+## Processing Overview
 1. This application posts all data to C360 in a single http post to the 'Authenticate' API method. Up to 128 meg of datat can be posted. The Authenticate API method requires an Integration Key. An Integration Key requires that someone first create the Integration via the client organization’s Maintenance -> Integrations menu. Upon a successful call, the Authenticate method returns a token that can be used for further API calls if needed.
 2. The Authenticate method can optionally contain a payload (body). When it does, the payload is evaluated and processed as a data import. Importing in this manner can be done for an individual data item or multiple items (i.e. batch). Once posted, the import will be queued for import. Upon completion, a summary email will be delivered to the recipients defined in the Integration. Status can also be viewed under the Home - Job Status menu.
 3. Whether or not a payload is provided, the Authenticate method returns a token that can then be used for further API calls.
@@ -97,4 +97,5 @@ Example json format:
 	}
 }
 ``` 
-
+#API Documentation
+Full API Documentation can be found here [Compliance 360 REST API Documentation](https://secure.compliance360.com/Maintenance/REST/v2/index.html)
