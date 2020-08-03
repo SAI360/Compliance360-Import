@@ -53,7 +53,7 @@ The following lists the required command line options:
 | Option | Description |
 | ------ | ----------- |
 | --filepath | The path to the *.CSV file to import |
-| --baseuri | The base uri to the Compliance 360 application. Most likely this value should be https&#58;//secure.compliance360.com |
+| --baseuri | The base uri to the Compliance 360 application. Most likely this value should be https://secure.compliance360.com |
 | --organization | The organization login name of the C360 client. |
 | --integrationkey | The integration key as supplied by the C360 client. |
 | --module | The module name of the target C360 module (no spaces). |
@@ -97,5 +97,5 @@ Example json format:
 	}
 }
 ``` 
-#API Documentation
+# API Documentation
 Full API Documentation can be found here [Compliance 360 REST API Documentation](https://secure.compliance360.com/Maintenance/REST/v2/index.html)
