@@ -1,4 +1,4 @@
-# Compliance 360 Import (Efficient batch import)
+# Compliance 360 Import (batch import)
 * [Description](#description)
 * [Installation](#installation)
 * [Configuration](#configuration)
