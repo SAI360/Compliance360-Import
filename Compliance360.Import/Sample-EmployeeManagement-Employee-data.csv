@@ -1,4 +1,0 @@
-Primary Division,Number,Last Name,First Name,Middle Initial,Salutation,Job Code,Phone,Fax,Email,Send Digest Message,Hire Date,Termination Date,Login.Active,Login.Username,Login.Password,Login.MustChangePassword
-Main Division,Last01F01,Last01,First01,M,Ms.,ABC123,111-222-3333,111-222-4545,first01.last01@mycompany.com,true,01/02/2010,01/02/2020,true,Last01F01,Lf010101!,false
-Main Division,Last02F01,Last02,First02,M,Mr.,ABC123,111-222-3333,111-222-4545,first02.last02@mycompany.com,true,01/02/2010,01/03/2020,true,Last02F01,Lf020302!,false
-Main Division,Last03F01,Last03,First03,M,Ms.,ABC123,111-222-3333,111-222-4545,first03.last03@mycompany.com,true,01/02/2010,01/04/2020,false,Last03F01,Lf030303!,true
