@@ -6,19 +6,29 @@ NOTE: The files contained here are intended as examples.
 # Configuration Steps
 
 1. Client Organization's admin must create an Integration definition within the Compliance 360 (C360) website. This is located under the Maintenance -> Integrations menu. Insure that the Host Account chosen has 'API Access' checked under the Module Access tab as well as all necessary permissions to create and update the intended data. Check all 'Allow Access' options except Allow Delete.
-2. In the Mappings tab of the Integration definition designate the indentifier field that will determine whether an imported record is created vs. updated.  
-| Unique identifier field | e.g. 'Number' for Incidents, 'Number' for Employee |
-3. In the Mappings tab of the Integration definition, create mappings for field defaults as needed. Recommended are:
+2. In the Mappings tab of the Integration definition designate the C360 Field that will be the unique indentifier which that will determine whether an imported record is created vs. updated.  
 
-Employee Import
+A. Employee Import
+| C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE | IDENTIFIER |
+| ------------------------------ | ----------------------------------- | ----------------------------- | ------------- | - |
+| Employee Management - Employee | (select the field such as 'Number') | (field name from import file) | (leave empty) | X |
+
+B. Incident Import
+| C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE | IDENTIFIER |
+| ----------------------- | ----------------------------------- | ----------------------------- | ------------- | - |
+| Incidents - Incident | (select the field such as 'Number') | (field name from import file) | (leave empty) | X |
+
+3. In the Mappings tab of the Integration definition, create mapping defaults for fields whose values are not supplied in the import file. Recommended are:
+
+A. Employee Import
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE |
-| ----- | ------ | ------ | ----------- |
+| ------------------------------ | -------------------- | ------------- | ------------------------------------------------------------------------------------------ |
 | Employee Management - Employee | Primary Division | (leave empty) | (select the Division where new employees should be created. If not supplied then the primary division of the Host Account that is defined with the Integration will be used.) |
 | Employee Management - Employee | Workflow Template Id | (leave empty) | (select the Worflow Template to be used when new employees are created. If not supplied then the default workflow template, as shown in workflow template maintenance, will be used.) |
 
-Incident Import
+B. Incident Import
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE |
-| ----- | ------ | ------ | ----------- |
+| -------------------- | ---------------- | ------------- | ------------------------------------------------------------------------------------------ |
 | Incidents - Incident | Module Type Name | (leave empty) | Module Type where new incidents should be created. If not supplied then the The Module Type named "Default" will be used. |
 | Incidents - Incident | Folder Id | (leave empty) | Folder where new incidents should be created. If not supplied then the then the root folder of the primary division of the Host Account that is defined with the Integration will be used. |
 | Incidents - Incident | Workflow Template Id | (leave empty) | (select the Worflow Template to be used when new incidents are created. If not supplied then the default workflow template, as shown in workflow template maintenance, will be used.) |
@@ -30,7 +40,7 @@ Incident Import
 5. In the Field Mappings tab of the Integration definition create additional Mappings as needed.
 
 # Testing
-All imports should be thoroughly tested and the results reviewed before running on production data. This can be done by arranging for a test database to be created by contacting SAI support (support@sai360.com).
+All imports should be thoroughly tested and the results reviewed before imporing to production data. This can be done by arranging for a test database to be created by contacting SAI support (support@sai360.com).
 
 # Example Methods for posting data
 
