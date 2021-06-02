@@ -10,13 +10,13 @@ NOTE: The files contained here are intended as examples.
 | Unique identifier field | e.g. 'Number' for Incidents, 'Number' for Employee |
 3. In the Mappings tab of the Integration definition, create mappings for field defaults as needed. Recommended are:
 
-| Employee Import | | | |
+Employee Import
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE |
 | ----- | ------ | ------ | ----------- |
 | Employee Management - Employee | Primary Division | (leave empty) | (select the Division where new employees should be created. If not supplied then the primary division of the Host Account that is defined with the Integration will be used.) |
 | Employee Management - Employee | Workflow Template Id | (leave empty) | (select the Worflow Template to be used when new employees are created. If not supplied then the default workflow template, as shown in workflow template maintenance, will be used.) |
 
-| Incident Import | | | |
+Incident Import
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE |
 | ----- | ------ | ------ | ----------- |
 | Incidents - Incident | Module Type Name | (leave empty) | Module Type where new incidents should be created. If not supplied then the The Module Type named "Default" will be used. |
