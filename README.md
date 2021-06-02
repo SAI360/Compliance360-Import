@@ -37,10 +37,14 @@ B. Incident Import
 * Obtain the exact spelling of the field by placing the mouse cursor over the caret to the right of the field and waiting 2-3 seconds. The exact field name will appear. This is the name to use in the first row of your import file.
 * Do not assume that the field label is the field name as they can be (and often are) different. 
 * Note that a full list of fields can be found under the Maintenance -> Modules menu and selecting the appropriate component. Use the Name value and NOT the System Name value.
-5. In the Field Mappings tab of the Integration definition create additional Mappings as needed.
+5. In the Field Mappings tab of the Integration definition create additional Mappings as needed. For instance, if field names in the import file cannot be makde to match C360 field names, you can add mappings to designate how they relate.
 
 # Testing
-All imports should be thoroughly tested and the results reviewed before imporing to production data. This can be done by arranging for a test database to be created by contacting SAI support (support@sai360.com).
+All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
+1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
+2. Post the data to the test site
+3. Monitor the progress of the job vis the C360 Job Status menu.
+4. Review results via C360 Reporting and including the Audit Trail
 
 # Example Methods for posting data
 
