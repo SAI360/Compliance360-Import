@@ -9,6 +9,7 @@ NOTE: The files contained here are intended as examples.
 2. In the Mappings tab of the Integration definition designate the indentifier field that will determine whether an imported record is created vs. updated.  
 | Unique identifier field | e.g. 'Number' for Incidents, 'Number' for Employee |
 3. In the Mappings tab of the Integration definition, create mappings for field defaults as needed. Recommended are:
+
 | Employee Import | | | |
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE |
 | ----- | ------ | ------ | ----------- |
