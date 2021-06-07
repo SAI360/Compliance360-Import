@@ -37,7 +37,7 @@ B. Incident Import
 * Obtain the exact spelling of the field by placing the mouse cursor over the caret to the right of the field and waiting 2-3 seconds. The exact field name will appear. This is the name to use in the first row of your import file.
 * Do not assume that the field label is the field name as they can be (and often are) different. 
 * Note that a full list of fields can be found under the Maintenance -> Modules menu and selecting the appropriate component. Use the Name value and NOT the System Name value.
-5. In the Field Mappings tab of the Integration definition create additional Mappings as needed. For instance, if field names in the import file cannot be makde to match C360 field names, you can add mappings to designate how they relate.
+5. In the Field Mappings tab of the Integration definition create additional Mappings as needed. For instance, if field names in the import file cannot be made to match C360 field names, you can add mappings to designate how they relate.
 
 # Testing
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
