@@ -43,7 +43,7 @@ B. Incident Import
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
 1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
 2. Post the data to the test site
-3. Monitor the progress of the job vis the C360 Job Status menu.
+3. Monitor the progress of the job via the C360 Job Status menu.
 4. Review results via C360 Reporting and including the Audit Trail
 
 # Example Methods for posting data
