@@ -54,7 +54,7 @@ The powerscript file Example-Employee-Import.ps1 is a 3 line script that posts t
 1. Edit this powerscript file to supply the url that is copied from the Integration definition. Also, specify the file name and path of the file being imported.
 2. Invoke it by going to a command prompt, navigating to the folder where it resides and isssuing the following command;
 ```
-powershell -File .\Example-Employee-Import.ps1
+powershell -ExecutionPolicy Unrestricted -File .\Example-Employee-Import.ps1
 ```
 
 ## .NET Example
