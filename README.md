@@ -6,7 +6,7 @@ NOTE: The files contained here are intended as examples.
 # Configuration Steps
 
 1. Client Organization's admin must create an Integration definition within the Compliance 360 (C360) website. This is located under the Maintenance -> Integrations menu. Insure that the Host Account chosen has 'API Access' checked under the Module Access tab as well as all necessary permissions to create and update the intended data. Check all 'Allow Access' options except Allow Delete.
-2. In the Mappings tab of the Integration definition designate the C360 Field that will be the unique indentifier which that will determine whether an imported record is created vs. updated. Recommended are:
+2. In the Mappings tab of the Integration definition designate the C360 Field that will be the unique identifier which that will determine whether an imported record is created vs. updated. Recommended are:
 
 A. Employee Import
 | C360 MODULE - COMPONENT | C360 FIELD | EXTERNAL FIELD | DEFAULT VALUE | IDENTIFIER |
