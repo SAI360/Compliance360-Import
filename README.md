@@ -50,12 +50,13 @@ All imports should be thoroughly tested and the results reviewed before importin
 
 ## PowerShell Example
 
-The powerscript file Example-Employee-Import.ps1 is a 3 line script that posts the import file directly to Compliance360 which then queues it for import. 
+The powerscript file Example-Employee-Import.ps1 is a 4 line script that posts the import file directly to Compliance360 which then queues it for import as a job. 
 1. Edit this powerscript file to supply the url that is copied from the Integration definition. Also, specify the file name and path of the file being imported.
-2. Invoke it by going to a command prompt, navigating to the folder where it resides and isssuing the following command;
+2. Invoke it by navigating to the folder where it resides and double-clicking on the companion command file Example-Employee-Import.cmd which issues the following command;
 ```
 powershell -ExecutionPolicy Unrestricted -File .\Example-Employee-Import.ps1
 ```
+Job status can then be viewed in Compliance360 under the Home -> Job Status menu.
 
 ## .NET Example
 
