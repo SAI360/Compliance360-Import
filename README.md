@@ -3,6 +3,6 @@ The Compliance 360 Import contains step-by-step instructions and examples for po
 
 ## Step-by-step Instructions and Examples
 
-* [Employee Batch Import](https://github.com/SAIGlobal/Compliance360-Import/Employee)
-* [Incident Batch Import](https://github.com/SAIGlobal/Compliance360-Import/Incident)
+* [Employee Batch Import](https://github.com/SAIGlobal/Compliance360-Import/Employee/README.md)
+* [Incident Batch Import](https://github.com/SAIGlobal/Compliance360-Import/Incident/README.md)
 
