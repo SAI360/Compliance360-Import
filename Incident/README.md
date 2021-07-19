@@ -63,8 +63,6 @@ All imports should be thoroughly tested and the results reviewed before importin
 
 ## Posting Data
 
-NOTE: The files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
-
 The PowerScript file [Example-Incident-Import.ps1]{Example-Incident-Import.ps1} is a simple 4 line script that demonstrates posting the import file directly to Compliance360 which then queues it for import as a job. 
 1. Edit this powerscript file to supply the url that is copied from the Integration definition. Also, specify the file name of the file being imported if not using the example.
 2. Invoke it by navigating to the folder where it resides and double-clicking on the companion command file [Example-Incident-Import.cmd](Example-Incident-Import.cmd) which issues the following command;
@@ -73,7 +71,11 @@ powershell -ExecutionPolicy Unrestricted -File .\Example-Incident-Import.ps1
 ```
 Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 
-The input file can just as easily be posted automatically from a custom application or commercial product (WorkDay, etc.). 
+Additional methods for posting the input file to C360 are as follows;
+* The input file can be posted directly from several commercial products. 
+* If developing a custom application, the following example demonstrates a .NET implementation. [Compliance360.Import](https://github.com/SAIGlobal/Compliance360-Import/tree/master/Compliance360.Import)
+
+NOTE: ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
 
 ## Support
 Issues and questions can be addressed by contacting SAI30 Support by sending an email to support@sai360.com.
