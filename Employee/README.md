@@ -7,7 +7,7 @@ Supported file formats are;
 * Delimited (CSV) 
 * JSON.
 
-Although pre-existing files can be supported via field mapping, etc., whenever posssible use the following recommendations when designing your file;
+If a pre-existing input file format is preferred, this can be supported via Integration Field Mapping. Alternatively, use the following recommendations when establishing the input file format;
 1. Consider using an Excel file format. This eliminates issues with embedded delimiters (i.e. commas) and new lines.
 2. Compile a list of the desired import fields. Best practice is to review the actual Edit form of the importing component (i.e. Employee).
 3. Only include fields for which you have relevant data to import. There's no need to import all C360 fields such that every item imports an empty value for a field. 
@@ -51,7 +51,7 @@ The following example files are not necessarily complete to a given client's nee
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
 1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
 2. Post the data to the test site
-3. Monitor the progress of the job via the C360 Job Status menu. Cllck on the Magnifying glass on the relevant entry to see a detailed summary of the import.
+3. Monitor the progress of the job via the C360 under the Home -> Job Status menu. Cllck on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 4. Review results via C360 Forms, Reporting and Audit Trail.
 
 ## Posting Data
@@ -64,7 +64,7 @@ The PowerScript file [Example-Employee-Import.ps1]{Example-Employee-Import.ps1} 
 ```
 powershell -ExecutionPolicy Unrestricted -File .\Example-Employee-Import.ps1
 ```
-Job status can then be viewed in Compliance360 under the Home -> Job Status menu. Cllck on the Magnifying glass on the relevant entry to see a detailed summary of the import.
+Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 
 The input file can just as easily be posted automatically from a custom application or commercial product (WorkDay, etc.). 
 
