@@ -62,7 +62,7 @@ The powershell Example-Employee-Import.ps1 is a simple 4 line script that demons
 3. Locate the companion windows command file Example-Employee-Import.cmd in the same folder. Double-clicking on this command file will immediately post the input file to C360 and queue it for import. 
 4. Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 
-NOTE: *ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
+NOTE: ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
 
 Additional methods for posting the input file to C360 are as follows;
 * The input file can be posted directly from several commercial products (WorkDay, etc.). 
