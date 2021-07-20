@@ -57,7 +57,7 @@ All imports should be thoroughly tested and the results reviewed before importin
 ## Posting Data
 
 The powershell Example-Employee-Import.ps1 is a simple 4 line script that demonstrates posting the import file directly to Compliance360 and queueing it for import.
-1. If not already downloaded, download this GitHub repository ([https://github.com/SAIGlobal/Compliance360-Import](https://github.com/SAIGlobal/Compliance360-Import) by clicking on the Code button. 
+1. If not already downloaded, download this GitHub repository ([https://github.com/SAIGlobal/Compliance360-Import](https://github.com/SAIGlobal/Compliance360-Import)) by clicking on the Code button. 
 2. Locate the powershell file Example-Employee-Import.ps1. Edit line 1 to supply the url that is copied from the Integration definition. Edit line 2 to supply the name of the file being imported. Place the input file in the same folder.
 3. Locate the companion windows command file Example-Employee-Import.cmd in the same folder. Double-clicking on this command file will immediately post the input file to C360 and queue it for import. 
 4. Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
