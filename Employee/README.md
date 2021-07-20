@@ -56,9 +56,9 @@ All imports should be thoroughly tested and the results reviewed before importin
 
 ## Posting Data
 
-The PowerScript file [Example-Employee-Import.ps1](Example-Employee-Import.ps1) is a simple 4 line script that demonstrates posting the import file directly to Compliance360 which then queues it for import as a job. 
-1. Edit this powerscript file to supply the url that is copied from the Integration definition. Also, specify the file name of the file being imported if not using the example.
-2. Invoke it by navigating to the folder where it resides and double-clicking on the companion command file [Example-Employee-Import.cmd](Example-Employee-Import.cmd) which issues the following command;
+The powershell Example-Employee-Import.ps1 is a simple 4 line script that demonstrates posting the import file directly to Compliance360 and queueing it for import. 
+1. Download the powershell file <a href="Example-Employee-Import.ps1" download>Example-Employee-Import.ps1</a>. Edit line 1 to supply the url that is copied from the Integration definition. Edit line 2 to supply the name of the file being imported. Place the powershell file and input file in the same folder.
+2. Download the companion windows command file <a href="Example-Employee-Import.cmd" download>Example-Employee-Import.cmd</a> to the same folder where the powershell file and input file reside. Double-clicking on this command file will then post the input file to C360 and queue it for import. It contains the following command;
 ```
 powershell -ExecutionPolicy Unrestricted -File .\Example-Employee-Import.ps1
 ```
