@@ -56,19 +56,17 @@ All imports should be thoroughly tested and the results reviewed before importin
 
 ## Posting Data
 
-The powershell Example-Employee-Import.ps1 is a simple 4 line script that demonstrates posting the import file directly to Compliance360 and queueing it for import. 
-1. Download the powershell file <a download="Example-Employee-Import.ps1" href="Example-Employee-Import.ps1">Example-Employee-Import.ps1</a>. Edit line 1 to supply the url that is copied from the Integration definition. Edit line 2 to supply the name of the file being imported. Place the powershell file and input file in the same folder.
-2. Download the companion windows command file <a download="Example-Employee-Import.cmd" href="Example-Employee-Import.cmd">Example-Employee-Import.cmd</a> to the same folder where the powershell file and input file reside. Double-clicking on this command file will then post the input file to C360 and queue it for import. It contains the following command;
-```
-powershell -ExecutionPolicy Unrestricted -File .\Example-Employee-Import.ps1
-```
-Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
+The powershell Example-Employee-Import.ps1 is a simple 4 line script that demonstrates posting the import file directly to Compliance360 and queueing it for import.
+1. If not already downloaded, download this GitHub repository ([https://github.com/SAIGlobal/Compliance360-Import](https://github.com/SAIGlobal/Compliance360-Import) by clicking on the Code button. 
+2. Locate the powershell file Example-Employee-Import.ps1. Edit line 1 to supply the url that is copied from the Integration definition. Edit line 2 to supply the name of the file being imported. Place the input file in the same folder.
+3. Locate the comppanioin command file Example-Employee-Import.cmd in the same folder. Double-clicking on this command file will immediately post the input file to C360 and queue it for import. 
+4. Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
+
+NOTE: ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
 
 Additional methods for posting the input file to C360 are as follows;
 * The input file can be posted directly from several commercial products (WorkDay, etc.). 
 * If developing a custom application, the following example demonstrates a .NET implementation. [Compliance360.Import](https://github.com/SAIGlobal/Compliance360-Import/tree/master/Compliance360.Import)
-
-NOTE: ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
 
 ## Support
 Issues and questions can be addressed by contacting SAI30 Support by sending an email to support@sai360.com.
