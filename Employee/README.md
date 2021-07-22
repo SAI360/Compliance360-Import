@@ -50,7 +50,7 @@ The following example files are not necessarily complete to a given client's nee
 ## Testing
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
 1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
-2. Post the data to the test site
+2. Post the data to the test site (see Posting Data below).
 3. Monitor the progress of the job via the C360 Home -> Job Status menu. Cllck on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 4. Review results via C360 Forms, Reporting and Audit Trail.
 
