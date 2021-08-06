@@ -77,7 +77,7 @@ Additional methods for posting the input file to C360 are as follows;
 
 ## Support
 Issues and questions can be addressed by contacting SAI30 Support by sending an email to support@sai360.com.
-You must provide the following information for your question to be researhced;
+You must provide the following information for your question to be researched;
 * The specific date and time of the posted data.
 * The results that did not occur as expected.
 
