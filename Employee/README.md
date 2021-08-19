@@ -1,18 +1,13 @@
 # Employee Batch Import
 Batch Import consists of a single API call (Authenticate) which accepts a data file and then performs many common processing tasks to import the contents. This includes determining whether to add or update each item, defaulting field values, resolving internal references to related data, mapping fields as needed, import job summary and job notifications. Its focus is for clients (or third-party partners) who are looking to automate the importing of data into a compliance 360 client organization on a regular basis.
 
-Steb-by-Step Instructions
+Steb-by-Step Instructions:
 
-[I. Determine Input File](#i-determine-input-file)
-
-[II. Configure Integration](#ii-configure-integration)
-
-[III. Testing](#iii-testing)
-
-[IV. Posting Data](#iv-posting-data)
-
-[V. Support](#v-support)
-
+[I. Determine Input File](#i-determine-input-file)<br />
+[II. Configure Integration](#ii-configure-integration)<br />
+[III. Testing](#iii-testing)<br />
+[IV. Posting Data](#iv-posting-data)<br />
+[V. Support](#v-support)<br />
 
 ## I. Determine Input File
 Supported file formats are;
