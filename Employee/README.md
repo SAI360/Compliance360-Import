@@ -3,11 +3,11 @@ Batch Import consists of a single API call (Authenticate) which accepts a data f
 
 Steb-by-Step Instructions
 
-[I, Determine Input File](#I. Determine Input File)
-[II, Configure Integration](#II. Configure Integration)
-[III. Testing](#III. Testing)
-[IV. Posting Data](#IV. Posting Data)
-[V. Support](#V. Support)
+[I. Determine Input File](#i.-determine-input-file)
+[II. Configure Integration](#ii.-configure-integration)
+[III. Testing](#iii.-testing)
+[IV. Posting Data](#iv.-posting-data)
+[V. Support](#v.-support)
 
 ## I. Determine Input File
 Supported file formats are;
