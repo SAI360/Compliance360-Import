@@ -1,7 +1,15 @@
 # Incident Batch Import
 Batch Import consists of a single API call (Authenticate) which accepts a data file and then performs many common processing tasks to import the contents. This includes determining whether to add or update each item, defaulting field values, resolving internal references to related data, mapping fields as needed, import job summary and job notifications. Its focus is for clients (or third-party partners) who are looking to automate the importing of data into a compliance 360 client organization on a regular basis.
 
-## Input File
+Steb-by-Step Instructions:
+
+[I. Determine Input File](#i-determine-input-file)<br />
+[II. Configure Integration](#ii-configure-integration)<br />
+[III. Testing](#iii-testing)<br />
+[IV. Posting Data](#iv-posting-data)<br />
+[V. Support](#v-support)<br />
+
+## I. Determine Input File
 Supported file formats are;
 * Excel
 * Delimited (CSV) 
@@ -29,7 +37,7 @@ The following example files are not necessarily complete to a given client's nee
 | Delimited | The file [Example-Incidents-Incident-data.csv](Example-Incidents-Incident-data.csv) contains sample Incident fields and data, This is a comma-delimited file (field values are seperated by commas) but any delimiter can be used if the url contains a &FieldDelimiter= parameter identifying the desired delimiter. | 
 | JSON | Example available upon request.
 
-## Configuration Steps
+## II. Configure Integration
 
 1. Client Organization's admin must create an Integration definition within the Compliance 360 (C360) website. This is located under the Maintenance -> Integrations menu. Choose Integration Type of 'User-Defined'. Ensure that the Host Account chosen has 'API Access' checked under the Module Access tab as well as all necessary permissions to create and update the intended data.
 2. In the Field Mappings tab of the Integration definition create an entry that designates the one (1) C360 Field that will be the unique identifier which will determine whether an imported item is added vs. updated. Recommended:
@@ -54,18 +62,18 @@ The following example files are not necessarily complete to a given client's nee
 
 4. In the Field Mappings tab of the Integration definition create additional Mappings as needed. For instance, if field names in the import file cannot be made to match C360 field names, you can add mappings to designate the corresponding field name in the input file (External Field).
 
-## Testing
+## III. Testing
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
 1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
 2. Post the data to the test site
 3. Monitor the progress of the job via the C360 Home -> Job Status menu. Cllck on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 4. Review results via C360 Forms, Reporting and Audit Trail.
 
-## Posting Data
+## IV. Posting Data
 
 The powershell Example-Incident-Import.ps1 is a simple 4 line script that demonstrates posting the import file directly to Compliance360 and queueing it for import.
 1. If not already downloaded, download this GitHub repository ([https://github.com/SAIGlobal/Compliance360-Import](https://github.com/SAIGlobal/Compliance360-Import)) by clicking on the Code button. 
-2. Locate the powershell file Example-Incident-Import.ps1. Edit line 1 to supply the url that is copied from the Integration definition. Edit line 2 to supply the name of the file being imported. Place the input file in the same folder.
+2. Locate the powershell file Example-Incident-Import.ps1. Edit line 1 of this file to supply the url that is copied from the Integration definition. Edit line 2 of this file to supply the name of the file being imported. Place the input file in the same folder.
 3. Locate the companion windows command file Example-Incident-Import.cmd in the same folder. Double-clicking on this command file will immediately post the input file to C360 and queue it for import. 
 4. Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 
@@ -75,9 +83,10 @@ Additional methods for posting the input file to C360 are as follows;
 * The input file can be posted directly from several commercial products. 
 * If developing a custom application, the following example demonstrates a .NET implementation. [Compliance360.Import](https://github.com/SAIGlobal/Compliance360-Import/tree/master/Compliance360.Import)
 
-## Support
+## V. Support
 Issues and questions can be addressed by contacting SAI30 Support by sending an email to support@sai360.com.
 You must provide the following information for your question to be researched;
+* The url that was used with the integration key blanked out for security purposes.
 * The specific date and time of the posted data.
 * The results that did not occur as expected.
 
