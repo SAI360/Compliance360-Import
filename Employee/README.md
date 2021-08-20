@@ -16,7 +16,7 @@ Supported file formats are;
 * JSON.
 
 If a pre-existing input file format is preferred, this can be supported via Integration Field Mapping. Alternatively, use the following recommendations when establishing the input file format;
-1. Consider using an Excel file format. This eliminates issues with embedded delimiters (i.e. commas) and new lines.
+1. Consider using an Excel file format. This eliminates issues with embedded delimiters (i.e. commas) and new lines. Do not use a Compliance360 IMA template file (.XML) as they are not compatible. Follow these guidelines to determine the fields (columns) in your input file.
 2. Compile a list of the desired import fields. Best practice is to review the actual Edit form of the importing component (i.e. Employee).
 3. Only include fields for which you have relevant data to import. There's no need to import all C360 fields such that every item imports an empty value for a field. 
 4. Use field names in your input file that match the C360 field names. Doing this makes it easier to maintain by avoiding field mapping. Use these tips to find the names;
