@@ -64,14 +64,14 @@ All imports should be thoroughly tested and the results reviewed before importin
 
 ## IV. Posting Data
 
-The file named 'Example-Employee-Import.cmd' is a simple command file that demonstrates posting the import file directly to Compliance360 and queueing it for import. It does this by invoking the simple PowerShell script named 'Example-Send-File.ps1'
+The file named 'Example-Employee-Import.cmd' is a simple command file that demonstrates posting the import file directly to Compliance360 and queueing it for import. It does this by invoking the simple PowerShell script named 'Example-Send-File.ps1'.
 1. If not already downloaded, download this GitHub repository ([https://github.com/SAIGlobal/Compliance360-Import](https://github.com/SAIGlobal/Compliance360-Import)) by clicking on the Code button. 
 2. Locate the Command file named 'Example-Employee-Import.cmd' and open in an editor such as Notepad or Notepad++. <br/>
-  2a. Edit line 2 of this file to supply the name of the file being imported. Do not remove the caret (^) at the end of the line. <br/>
-  2b. Edit line 3 of this file to supply the url that is copied from the Integration definition. Do not remove the caret (^) at the end of the line. <br/>
+  2a. Edit line 2 to supply the name of the file being imported. Do not remove the caret (^) at the end of the line. <br/>
+  2b. Edit line 3 to supply the url that is copied from the Integration definition. Do not remove the caret (^) at the end of the line. <br/>
   2c. Edit line 4 if the import file is delimited and uses a field delimiter other than a comma(,). Specify the delimiter used.
-3. Place the input file in the same folder.
-4. Double-clicking on the command file 'Example-Employee-Import.cmd' will immediately post the input file to C360 via thePowerShee script and queue it for import. 
+3. Place the input file in the same folder as the command file file.
+4. Double-clicking on the command file 'Example-Employee-Import.cmd' will immediately post the input file to C360 via the PowerShell script and queue it for import. 
 5. Job status can then be viewed in C360 under the Home -> Job Status menu. Click on the Magnifying glass on the relevant entry to see a detailed summary of the import.
 
 NOTE: ALL files contained here are intended as examples only of the Batch API call and do not constitute supportable C360 application components.
