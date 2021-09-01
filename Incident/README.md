@@ -87,6 +87,7 @@ Additional methods for posting the input file to C360 are as follows;
 Issues and questions can be addressed by contacting SAI30 Support by sending an email to support@sai360.com.
 You must provide the following information for your question to be researched;
 * The url that was used with the integration key blanked out for security purposes.
+* The data or file that was posted.
 * The specific date and time of the posted data.
 * The results that did not occur as expected.
 
