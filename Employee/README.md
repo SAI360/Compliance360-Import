@@ -57,7 +57,7 @@ The following example files are not necessarily complete to a given client's nee
 
 5. If importing Employee Relationships they must be imported from a field in the employee input file record and not from a seperate file record. Each relationship should appear in the employee input file record as a separate field which holds the identifier value of the related employee. For example; an Employee import file field named 'Manager' would hold the identifier value of the employee's manager and a field named 'Supervisor' would hold the identifier value of the employee's supervisor. Field Mappings are then required to import these properly. Here is how to enter the mappings for this example. Note that mapping entries for Type must have the Identifer field checked on; 
 
-!(Images/EmployeeRelationshipMapping.PNG)
+!(EmployeeRelationshipMapping.PNG)
 
 ## III. Testing
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
