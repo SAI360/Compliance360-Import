@@ -57,6 +57,8 @@ The following example files are not necessarily complete to a given client's nee
 
 5. If importing an Employee Relationship it must be imported at the same time as the Employee information and from a field in the employee input file record. Each relationship should appear in the employee input file record as a separate field which holds the identifier value of the related employee. For example; an Employee import file field named 'Manager' would hold the identifier value of the employee's manager and a field named 'Supervisor' would hold the identifier value of the employee's supervisor. Field Mappings are then required to import these properly. Here is how to enter the mappings for this example (note that mapping entries for Type must have the Identifer field checked); ![Employee Relationship Mapping](Images/EmployeeRelationshipMapping.PNG)
 
+6. File size can range from 1 to 100,000 records (larger available) and submitted at any reasonable frequency. Some examples; 100,000 weekly, 50,000 daily, 1 every minute (approx.). Each submittal is queued and typically begins processing within seconds. 
+
 ## III. Testing
 All imports should be thoroughly tested and the results reviewed before importing to production data. This can be done by;
 1. Arranging for a test database to be created by contacting SAI support (support@sai360.com).
